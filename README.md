@@ -28,11 +28,11 @@ The **AWS Foundations Series** is an introductory module within BeSA that covers
 │   ├── README.md         # Challenge-specific instructions
 │   └── ...               # Sample files for this challenge
 │
-├── week-1/         # Technical Challenge 2 – [Challenge Name]
+├── week-2/         # Technical Challenge 2 – [Challenge Name]
 │   ├── README.md
 │   └── ...
 │
-├── week-1-0N/         # Technical Challenge N – [Challenge Name]
+├── week-N/         # Technical Challenge N – [Challenge Name]
 │   ├── README.md
 │   └── ...
 │
