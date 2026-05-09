@@ -45,5 +45,5 @@ The page displays:
 <p align="center">
   <img src="../assets/besa-logo.png" alt="BeSA – Become a Solutions Architect" width="250"/>
   <br/>
-  <strong>© 2025 BeSA – Become a Solutions Architect | AWS Foundations</strong>
+  <strong>© 2026 BeSA – Become a Solutions Architect | AWS Foundations</strong>
 </p>
