@@ -1,0 +1,294 @@
+/* ============================================
+   BeSA - Become a Solutions Architect
+   Brand Stylesheet
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300;400;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+
+:root {
+  --teal-dark:   #0d4f5c;
+  --teal-mid:    #14808a;
+  --teal-light:  #3ecfcf;
+  --teal-bright: #4dd9d9;
+  --white:       #ffffff;
+  --off-white:   #e8f8f8;
+  --text-dark:   #0a3d47;
+  --glow:        0 0 24px rgba(62, 207, 207, 0.55);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: var(--teal-dark);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+/* ── HEADER ─────────────────────────────── */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  background: var(--teal-dark);
+  position: relative;
+  z-index: 10;
+  border-bottom: 2px solid rgba(62,207,207,.25);
+}
+
+header::after {
+  content: '';
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--teal-light), transparent);
+}
+
+.header-logo {
+  height: 128px;
+  filter: drop-shadow(0 0 10px rgba(62,207,207,.4));
+}
+
+.header-tagline {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--teal-light);
+  opacity: .85;
+}
+
+/* ── HERO / SPLIT LAYOUT ─────────────────── */
+.hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 140px);
+  max-height: 620px;
+  min-height: 420px;
+}
+
+.hero-left {
+  background: var(--teal-dark);
+  position: relative;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* geometric diagonal pattern */
+.hero-left::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    repeating-linear-gradient(
+      -45deg,
+      transparent,
+      transparent 28px,
+      rgba(255,255,255,.04) 28px,
+      rgba(255,255,255,.04) 30px
+    );
+  pointer-events: none;
+}
+
+.hero-right {
+  background: var(--teal-light);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-right::before {
+  content: '';
+  position: absolute;
+  top: -80px; right: -80px;
+  width: 280px; height: 280px;
+  border-radius: 50%;
+  background: rgba(255,255,255,.08);
+  pointer-events: none;
+}
+
+/* ── PHOTO FRAME ─────────────────────────── */
+.photo-wrapper {
+  position: relative;
+  width: 220px; height: 220px;
+  animation: floatUp 3s ease-in-out infinite alternate;
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0); }
+  to   { transform: translateY(-10px); }
+}
+
+.photo-frame {
+  width: 220px; height: 220px;
+  border-radius: 50%;
+  border: 4px solid var(--teal-dark);
+  box-shadow: 0 0 0 8px rgba(13,79,92,.25), var(--glow);
+  overflow: hidden;
+  background: var(--teal-mid);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: box-shadow .3s;
+}
+
+.photo-frame:hover {
+  box-shadow: 0 0 0 8px rgba(13,79,92,.4), 0 0 40px rgba(62,207,207,.75);
+}
+
+.photo-frame img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.photo-fallback {
+  display: none;
+  width: 100%; height: 100%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1.6;
+  padding: 1.5rem;
+}
+
+/* ── ACHIEVEMENT BADGE ───────────────────── */
+.achievement {
+  background: var(--teal-dark);
+  border: 2px solid var(--teal-light);
+  border-radius: 12px;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  max-width: 360px;
+  box-shadow: var(--glow);
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--teal-mid), var(--teal-bright), var(--teal-mid));
+  animation: shimmer 2.5s linear infinite;
+}
+
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+.achievement-icon {
+  font-size: 2rem;
+  margin-bottom: .5rem;
+}
+
+.achievement-text {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.5;
+  color: var(--white);
+  letter-spacing: .03em;
+}
+
+.achievement-text strong {
+  color: var(--teal-bright);
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .12em;
+  margin-bottom: .3rem;
+}
+
+/* ── SVG ROCKET ANIMATION ────────────────── */
+.rocket-canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+  overflow: hidden;
+}
+
+/* Stars twinkling */
+.star { animation: twinkle 2s ease-in-out infinite alternate; }
+.star:nth-child(2n)  { animation-delay: .5s; }
+.star:nth-child(3n)  { animation-delay: 1s; }
+.star:nth-child(5n)  { animation-delay: 1.5s; }
+
+@keyframes twinkle {
+  from { opacity: .3; r: 1.5; }
+  to   { opacity: 1;  r: 2.5; }
+}
+
+/* Rocket CSS class kept for flame only */
+
+/* Exhaust flame */
+.flame {
+  animation: flamePulse .15s ease-in-out infinite alternate;
+  transform-origin: center top;
+}
+
+@keyframes flamePulse {
+  from { transform: scaleY(1)   scaleX(1); }
+  to   { transform: scaleY(1.3) scaleX(.85); }
+}
+
+/* Smoke particles */
+.smoke {
+  animation: smokeRise 1.2s ease-out infinite;
+  opacity: 0;
+}
+
+.smoke:nth-child(1) { animation-delay: 0s; }
+.smoke:nth-child(2) { animation-delay: .4s; }
+.smoke:nth-child(3) { animation-delay: .8s; }
+
+@keyframes smokeRise {
+  0%   { transform: translateY(0)   scale(1); opacity: .5; }
+  100% { transform: translateY(50px) scale(2.5); opacity: 0; }
+}
+
+/* Orbit ring */
+.orbit-ring {
+  animation: orbitSpin 12s linear infinite;
+  transform-origin: 50% 50%;
+}
+@keyframes orbitSpin { to { transform: rotate(360deg); } }
+
+/* ── FOOTER ──────────────────────────────── */
+footer {
+  background: #091f25;
+  text-align: center;
+  padding: 1.2rem;
+  font-size: .8rem;
+  letter-spacing: .1em;
+  color: rgba(255,255,255,.3);
+  border-top: 1px solid rgba(62,207,207,.12);
+}
+
+/* ── RESPONSIVE ──────────────────────────── */
+@media (max-width: 768px) {
+  header { padding: 1rem 1.5rem; }
+  .header-tagline { display: none; }
+  .hero { grid-template-columns: 1fr; height: auto; max-height: none; }
+  .hero-left { min-height: 280px; }
+  .hero-right { padding: 2rem 1.5rem; }
+  .photo-frame, .photo-wrapper { width: 160px; height: 160px; }
+}
