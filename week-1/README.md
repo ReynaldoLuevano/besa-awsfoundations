@@ -6,12 +6,11 @@
 
 ## 📋 Challenge Overview
 
-In this Technical Challenge, you will launch an **Amazon EC2 instance**, configure it as a web server, deploy a provided webpage, and personalise it with your own profile photo — ending up with a result that looks like the screenshot below.
+In this Technical Challenge, you will launch an **Amazon EC2 instance**, configure it as a web server, deploy a provided webpage, and personalise it with your own profile photo 
 
 Upon completing this challenge, you will have demonstrated the ability to:
 
 - Launch and configure an EC2 instance with specific compute and storage requirements
-- Connect to a Linux instance and perform administrative tasks
 - Install and run a web server
 - Clone a GitHub repository onto a remote instance
 - Customise and serve a static webpage
