@@ -49,8 +49,7 @@ The **AWS Foundations Series** is an introductory module within BeSA that covers
 
 Before using the files in this repository, make sure you have:
 
-- An active **AWS Account** (Free Tier is sufficient for most challenges)
-- An active **AWS SkillBuilder Account ** (Free Tier is sufficient for most challenges)
+- An active **AWS SkillBuilder Account** 
 - Basic familiarity with the **AWS Management Console**
 - **Git** installed on your local machine
 
