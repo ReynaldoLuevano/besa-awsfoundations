@@ -102,8 +102,8 @@ header::after {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
-  padding: 3rem 2.5rem;
+  gap: 1rem;
+  padding: 1.5rem 2.5rem;
   position: relative;
   overflow: hidden;
 }
@@ -118,10 +118,25 @@ header::after {
   pointer-events: none;
 }
 
+/* ── STUDENT TITLE ───────────────────────── */
+.student-title {
+  font-family: 'Exo 2', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--teal-dark);
+  text-align: center;
+}
+
 /* ── PHOTO FRAME ─────────────────────────── */
 .photo-wrapper {
   position: relative;
-  width: 220px; height: 220px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .75rem;
   animation: floatUp 3s ease-in-out infinite alternate;
 }
 
@@ -167,12 +182,36 @@ header::after {
   padding: 1.5rem;
 }
 
+/* ── UPLOAD BUTTON ───────────────────────── */
+.upload-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  background: var(--teal-dark);
+  color: var(--teal-light);
+  border: 1.5px solid var(--teal-light);
+  border-radius: 999px;
+  padding: .45rem 1.2rem;
+  font-family: 'Exo 2', sans-serif;
+  font-size: .82rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  cursor: pointer;
+  transition: background .2s, color .2s, box-shadow .2s;
+}
+
+.upload-btn:hover {
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  box-shadow: var(--glow);
+}
+
 /* ── ACHIEVEMENT BADGE ───────────────────── */
 .achievement {
   background: var(--teal-dark);
   border: 2px solid var(--teal-light);
   border-radius: 12px;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   text-align: center;
   max-width: 360px;
   box-shadow: var(--glow);
@@ -195,13 +234,13 @@ header::after {
 }
 
 .achievement-icon {
-  font-size: 2rem;
-  margin-bottom: .5rem;
+  font-size: 1.6rem;
+  margin-bottom: .3rem;
 }
 
 .achievement-text {
   font-family: 'Exo 2', sans-serif;
-  font-size: 1.15rem;
+  font-size: 1rem;
   font-weight: 600;
   line-height: 1.5;
   color: var(--white);
@@ -211,11 +250,11 @@ header::after {
 .achievement-text strong {
   color: var(--teal-bright);
   display: block;
-  font-size: 1rem;
+  font-size: .9rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .12em;
-  margin-bottom: .3rem;
+  margin-bottom: .2rem;
 }
 
 /* ── SVG ROCKET ANIMATION ────────────────── */
