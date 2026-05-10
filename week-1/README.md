@@ -24,6 +24,8 @@ Upon completing this challenge, you will have demonstrated the ability to:
 | 1 | **Install a web server** on your EC2 instance |
 | 2 | **Download the webpage code** from this GitHub repository onto the instance |
 | 3 | **Update the profile photo** on the webpage with your own photo |
+| 4 | **Connect to your EC2 instance** via SSH |
+
 
 ---
 
