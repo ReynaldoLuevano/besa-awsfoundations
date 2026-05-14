@@ -6,14 +6,14 @@
 
 ## 📋 Challenge Overview
 
-In this Technical Challenge, you will launch an **Amazon EC2 instance**, configure it as a web server, deploy a provided webpage, and personalise it with your own profile photo 
+In this Technical Challenge, you will launch install **Wordpress**, and configure it across at least 2 EC2 instances, once deployed create a post 
 
 Upon completing this challenge, you will have demonstrated the ability to:
 
-- Launch and configure an EC2 instance with specific compute and storage requirements
-- Install and run a web server
-- Clone a GitHub repository onto a remote instance
-- Customise and serve a static webpage
+- Connect to the EC2 Instance using SSM Session manager 
+- Install Apache, PHP and Mysql using a Script
+- Install and setup Word press
+- Mount an EFS on EC2 instances
 
 ---
 
@@ -21,10 +21,11 @@ Upon completing this challenge, you will have demonstrated the ability to:
 
 | # | Objective |
 |---|-----------|
-| 1 | **Install a web server** on your EC2 instance |
-| 2 | **Download the webpage code** from this GitHub repository onto the instance |
-| 3 | **Update the profile photo** on the webpage with your own photo |
-| 4 | **Connect to your EC2 instance** via SSH |
+| 1 | **Install PHP, Apache and MySQL** on your EC2 instance, you can use the script from this GitHub Repo  |
+| 2 | **Mount EFS** on the EC2 Instance |
+| 3 | **Download and install wordpress** |
+| 4 | **Mount EFS** on at least one more EC2 instances |
+| 5 | **Create a new post** on Wordpress |
 
 
 ---
@@ -35,10 +36,9 @@ Once the challenge is complete, your webpage should look like this:
 
 ![Expected Result](./assets/challenge-screenshot.png)
 
-The page displays:
-- The **BeSA branding** header
-- Your **profile photo** in a circular frame
-- A **trophy badge** with the text: *"I have solved the Technical Challenge of BeSA AWS Foundations"*
+The post displays:
+- The **BeSA** logo
+- Your **name** 
 
 ---
 
