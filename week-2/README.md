@@ -6,7 +6,7 @@
 
 ## 📋 Challenge Overview
 
-In this Technical Challenge, you will launch install **Wordpress**, and configure it across at least 2 EC2 instances, once deployed create a post 
+In this Technical Challenge, you will install **Wordpress**, and configure it across at least 2 EC2 instances using **EFS**. Once deployed you will create a post 
 
 Upon completing this challenge, you will have demonstrated the ability to:
 
