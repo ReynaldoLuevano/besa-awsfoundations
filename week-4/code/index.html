@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BeSA – AWS Foundations</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Barlow:wght@300;400;600&family=Barlow+Condensed:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- ─── NAV (sin links) ─── -->
+  <header class="nav">
+    <div class="nav__brand">
+      <img src="img/logo.png" alt="BeSA Logo" class="nav__logo" onerror="this.style.display='none'" />
+      <span class="nav__title">AWS <span class="accent">FOUNDATIONS</span></span>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ─── CARD DE LOGRO ─── -->
+    <section class="achievement" id="achievement">
+      <div class="achievement__wrapper">
+
+        <!-- Card: foto + badge -->
+        <div class="achievement__card">
+
+          <!-- 1. Foto del usuario -->
+          <div class="achievement__photo-wrapper">
+            <label class="achievement__photo-label" for="photoInput" title="Upload your photo">
+              <div class="achievement__photo-circle" id="photoCircle">
+                <img id="photoPreview" src="img/myfoto.png" alt="Your photo"
+                     onerror="this.style.display='none'; document.getElementById('photoPlaceholder').style.display='flex'" />
+                <div id="photoPlaceholder" class="achievement__photo-placeholder">
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="18" r="8" stroke="currentColor" stroke-width="2.5"/>
+                    <path d="M6 42c0-9.941 8.059-18 18-18s18 8.059 18 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+                  </svg>
+                  <span>Place your image on<br/><code>img/myfoto.png</code></span>
+                </div>
+                <div class="achievement__photo-overlay">
+                  <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 16v-8M8 12l4-4 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="2"/>
+                  </svg>
+                  Upload photo
+                </div>
+              </div>
+            </label>
+            <input type="file" id="photoInput" accept="image/*" hidden />
+
+            <button class="btn btn--outline btn--sm" id="uploadBtn">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 13V4M6 8l4-4 4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/><path d="M3 16h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Upload photo
+            </button>
+          </div>
+
+          <!-- 2. Badge de logro -->
+          <div class="achievement__badge">
+            <span class="achievement__trophy">🏆</span>
+            <p class="achievement__org">AWS FOUNDATIONS</p>
+            <p class="achievement__text">I have solved the Technical Challenge<br/>of BeSA AWS Foundations</p>
+          </div>
+
+        </div>
+
+        <!-- 3. Título fuera del card, debajo -->
+        <h1 class="achievement__title">AWS <span class="accent">FOUNDATIONS</span></h1>
+
+      </div>
+    </section>
+
+    <!-- ─── VISOR DE VERSIONES S3 ─── -->
+    <section class="versions" id="versions">
+      <h2 class="versions__title">Image Version Explorer</h2>
+      <p class="versions__desc">Enter the public S3 object URL — versions are fetched automatically from the bucket.</p>
+
+      <div class="versions__controls">
+        <div class="versions__input-group">
+          <label for="bucketUrl">S3 Object URL</label>
+          <input type="url" id="bucketUrl"
+                 placeholder="https://my-bucket.s3.us-east-1.amazonaws.com/img/myfoto.png"
+                 class="versions__input" />
+        </div>
+        <button class="btn btn--primary" id="loadVersionsBtn">
+          <svg viewBox="0 0 20 20" fill="none" style="width:18px;height:18px">
+            <path d="M4 10a6 6 0 1 0 12 0 6 6 0 0 0-12 0M10 7v3l2 2" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          </svg>
+          Load Versions
+        </button>
+      </div>
+
+      <!-- Estado / loading -->
+      <div class="versions__status" id="versionsStatus"></div>
+
+      <!-- Grid de versiones -->
+      <div class="versions__grid" id="versionsGrid"></div>
+    </section>
+  </main>
+
+  <!-- ─── FOOTER ─── -->
+  <footer class="footer">
+    <p>BeSA – Become a Solutions Architect &copy; 2025 · AWS Foundations</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
